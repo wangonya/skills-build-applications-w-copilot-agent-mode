@@ -10,8 +10,7 @@ import reportWebVitals from './reportWebVitals';
 // Set REACT_APP_CODESPACE_URL from environment or fallback to localhost
 const codespaceName = process.env.REACT_APP_CODESPACE_NAME || window.location.hostname.split('-')[0];
 const protocol = window.location.protocol;
-const port = window.location.port || '8000';
-const REACT_APP_CODESPACE_URL = codespaceName ? `${protocol}//${codespaceName}-8000.app.github.dev` : `${protocol}//localhost:${port}`;
+const REACT_APP_CODESPACE_URL = `${protocol}//${codespaceName}`;
 process.env.REACT_APP_CODESPACE_URL = REACT_APP_CODESPACE_URL;
 console.log('REACT_APP_CODESPACE_URL:', REACT_APP_CODESPACE_URL);
 
